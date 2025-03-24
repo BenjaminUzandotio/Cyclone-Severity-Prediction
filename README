@@ -1,0 +1,109 @@
+# Cyclone Severity Prediction
+
+## Overview
+This project aims to develop a machine learning model to predict the severity of tropical cyclones based on geographical input data. The dataset includes storm data from IBTrACS (International Best Track Archive for Climate Stewardship), providing historical information on cyclones' paths, wind speeds, pressures, and more.
+
+The goal is to predict the **TD9636_STAGE** column (severity stage) using machine learning techniques.
+
+## Project Structure
+```bash
+├── data/                     # Raw and processed data files
+├── notebooks/                # Jupyter Notebooks for data analysis
+├── src/                      # Source code for model training and web app
+├── web_app/                  # Flask or Streamlit web app code
+├── reports/                  # Final report
+├── videos/                   # Demo video
+├── .gitignore                # Files to ignore in version control
+├── README.md                 # Project documentation
+├── requirements.txt          # Project dependencies
+
+Installation
+1. Clone this repository:
+https://github.com/Cyclone-Severity-Prediction/Cyclone-Severity-Prediction/new/main
+
+cd Cyclone-Severity-Prediction
+pip install -r requirements.txt
+3. Requirements:
+Python 3.8+
+
+Jupyter Notebook
+
+Flask or Streamlit (for web app)
+
+Libraries: Pandas, Numpy, Scikit-learn, Matplotlib, Seaborn, etc.
+
+Dataset
+The dataset used for this project is sourced from the IBTrACS dataset, containing tropical cyclone data globally from 1980 onward. Key variables include:
+
+SID: Storm Identifier
+
+NUMBER: Cyclone number for the season
+
+BASIN: Storm basin (e.g., North Atlantic, North Pacific)
+
+LAT, LON: Geographical coordinates of the cyclone
+
+WMO_WIND: Maximum sustained wind speed
+
+WMO_PRES: Minimum central pressure
+
+For a full list of variables, refer to the IBTrACS variable documentation.
+
+Steps
+1. Data Preprocessing:
+The dataset was cleaned by removing irrelevant columns such as USA_AGENCY, USA_STATUS, USA_WIND, and others that do not influence cyclone severity.
+
+Missing values were handled and the data was normalized for model training.
+
+2. Exploratory Data Analysis (EDA):
+We performed an initial analysis of the data, including visualizing the relationships between cyclone severity and other features (e.g., wind speed, pressure, latitude, longitude).
+
+We also identified correlations and outliers that could affect the model’s performance.
+
+3. Modeling:
+The model pipeline includes:
+
+Feature engineering and selection
+
+Training multiple models (e.g., Decision Trees, Random Forests, XGBoost)
+
+Comparing model performance and choosing the best one based on evaluation metrics (Accuracy, Precision, Recall, F1-score).
+
+4. Deployment:
+A simple Flask or Streamlit web app was developed to serve the model. The user can input storm parameters via a web interface, and the model will return the predicted severity level of the cyclone.
+
+Web App
+The deployed web application allows users to input data on tropical cyclones and receive predictions on the severity stage.
+
+To run the web application locally:
+
+Navigate to the web_app directory.
+
+Run the Flask/Streamlit app:
+
+python app.py  # For Flask
+streamlit run app.py  # For Streamlit
+Visit http://localhost:5000 (Flask) or http://localhost:8501 (Streamlit) in your browser to interact with the app.
+
+Report
+A detailed report (5-10 pages) describing the methodology, results, and deployment steps is available in the reports/ directory.
+
+Demo Video
+A short video demonstrating the web application in action is available in the videos/ folder.
+
+Contributing
+Feel free to fork this repository, make improvements, and submit pull requests. Please ensure that your contributions adhere to the project's coding standards and that all tests pass.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Acknowledgments
+IBTrACS for providing the tropical cyclone data.
+
+The Flask and Streamlit documentation for helping with web app deployment.
+
+Scikit-learn and other libraries used for building machine learning models.
+
+
+
+
