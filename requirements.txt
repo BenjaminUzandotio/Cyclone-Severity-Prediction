@@ -1,0 +1,40 @@
+# Web framework for deployment
+flask==2.2.2
+streamlit==1.12.0
+
+# Data manipulation and analysis
+pandas==1.5.3
+numpy==1.23.5
+
+# Machine learning libraries
+scikit-learn==1.1.2
+xgboost==1.7.3
+scipy==1.9.3
+
+# Data visualization
+matplotlib==3.6.2
+seaborn==0.11.2
+
+# Jupyter and notebook tools
+jupyterlab==3.4.4
+ipykernel==6.9.1
+
+# Additional useful libraries
+requests==2.28.1
+joblib==1.2.0  # For saving models
+python-dotenv==0.19.2  # To manage environment variables (useful for deployment)
+
+Explanation of the included libraries:
+Flask and Streamlit: Frameworks for creating the web application (Flask for a more customizable API or Streamlit for a faster interface).
+
+Pandas and Numpy: Primary tools for data manipulation.
+
+Scikit-learn and XGBoost: Libraries for training and evaluating machine learning models.
+
+Matplotlib and Seaborn: For data visualization and result plotting.
+
+JupyterLab and IPython: For interactive notebooks and Python support in the notebooks.
+
+Joblib: For model serialization and saving (useful after training).
+
+Python-dotenv: Useful for managing environment variables during deployment (e.g., API keys, secrets).
