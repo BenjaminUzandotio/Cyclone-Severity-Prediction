@@ -139,23 +139,15 @@ F1-score
 5. Web Application
 We have built a simple web application to showcase the model predictions:
 
-Flask or Streamlit serves as the backend for running the prediction model.
+Streamlit serves as the backend for running the prediction model.
 
 Users can input cyclone features (e.g., latitude, longitude, wind speed) through the web interface and receive a severity prediction.
 
 6. Deployment
 You can run the web application locally with the following commands:
 
-Flask:
-python app.py
-
 Streamlit:
 streamlit run app.py
-
-The application will be available at:
-
-Flask: http://localhost:5000
-Streamlit: http://localhost:8501
 
 How to Contribute
 Contributions are welcome! Feel free to fork the repository, create a new branch, and submit a pull request.
